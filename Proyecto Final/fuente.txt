@@ -1,0 +1,36 @@
+<## ERROR CONSTANTE ##>
+
+# Declaraciones
+ingrediente masa = 500;
+receta TEMP_HORNO = 180;  # Esto es una constante
+
+preparar PIZZA() {
+    imprimir("Calentando horno...");
+    
+    # Aquí está el error: Intentamos cambiar una constante
+    TEMP_HORNO = 250;
+    
+    hornear(TEMP_HORNO);
+}
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

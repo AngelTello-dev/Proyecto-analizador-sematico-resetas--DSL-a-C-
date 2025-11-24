@@ -1,29 +1,75 @@
-<## ERROR CONSTANTE ##>
+<## RECETA: PASTEL DE CHOCOLATE IMPOSIBLE ##>
 
-# Declaraciones
-ingrediente masa = 500;
-receta TEMP_HORNO = 180;  # Esto es una constante
+# Declaración de ingredientes
+ingrediente harina = 400;
+ingrediente azucar = 150.5;
+ingrediente huevos = 3;
+ingrediente leche = 0.250;
+ingrediente levadura = 0.012;
+ingrediente chocolate = verdadero;
 
-preparar PIZZA() {
-    imprimir("Calentando horno...");
+# Recetas constantes
+receta TEMP_HORNO = 180;
+receta TIEMPO_COCCION = 45;
+receta PORCIONES = 8;
+
+# Función principal
+preparar PASTEL_CHOCOLATE() {
+    # Expresiones de asignación
+    ingrediente cantidad_mezcla = 0;
+    ingrediente calidad = verdadero;
     
-    # Aquí está el error: Intentamos cambiar una constante
-    TEMP_HORNO = 250;
+    # Expresiones aritméticas
+    ingrediente total_ingredientes = harina + azucar + (huevos * 50);
+    ingrediente proporcion = (harina * 100) / total_ingredientes;
+    
+    # Condicional múltiple
+    si (TEMP_HORNO > 200) {
+        imprimir("Temperatura muy alta");
+    } 
+    osi si (TEMP_HORNO < 150) {
+        imprimir("Temperatura muy baja");
+    } 
+    sino {
+        imprimir("Temperatura ideal");
+    }
+    
+    # Expresiones lógicas
+    si (chocolate == verdadero && huevos > 0) {
+        imprimir("Ingredientes premium disponibles");
+    }
+    
+    # Condicional doble
+    si (azucar >= 100) {
+        imprimir("Suficiente azúcar");
+    } sino {
+        imprimir("Agregar más azúcar");
+    }
+    
+    # Ciclo mientras
+    mientras (cantidad_mezcla < 100) {
+        batir();
+        cantidad_mezcla = cantidad_mezcla + 10;
+    }
+    
+    # Ciclo para
+    ingrediente i = 0;
+    para (i = 0; i < PORCIONES; i = i + 1) {
+        imprimir("Preparando porción");
+    }
+    
+    # Lectura de variable
+    leer(leche);
+    
+    # Expresión combinada
+ si ((harina * azucar) / 1000 > 20 && calidad == verdadero) {
+        imprimir("Calidad garantizada");
+    }
     
     hornear(TEMP_HORNO);
-}
- 
-
-
-
-
-
-
-
-
-
-
-
+    reposar(TIEMPO_COCCION);
+    servir();
+ }
 
 
 
